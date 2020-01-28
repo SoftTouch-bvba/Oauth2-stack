@@ -112,13 +112,13 @@ class Oauth2AccessToken extends Eloquent
 	 */
 	protected static function generateAccessToken()
 	{
-		if (function_exists('mcrypt_create_iv')) 
+		/*if (function_exists('mcrypt_create_iv')) 
 		{
 			$randomData = mcrypt_create_iv(20, MCRYPT_DEV_URANDOM);
 			if ($randomData !== false && strlen($randomData) === 20)
 
 				return bin2hex($randomData);
-		}
+		}*/
 
 		if (function_exists('openssl_random_pseudo_bytes'))
 		{
